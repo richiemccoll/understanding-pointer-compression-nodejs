@@ -1,0 +1,14 @@
+{
+  "name": "understanding-pointer-compression",
+  "type": "module",
+  "main": "large-payload-server.js",
+  "scripts": {
+    "dev": "node --watch large-payload-server.js",
+    "start": "node large-payload-server.js",
+    "benchmark": "node bench.js"
+  },
+  "author": "richiemccoll",
+  "dependencies": {
+    "autocannon": "^7.10.0"
+  }
+}
