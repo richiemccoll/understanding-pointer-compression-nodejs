@@ -4,6 +4,10 @@ This repo contains:
 
 - a simple server that handles large payloads
 - a script that uses `autocannon` to load test the server.
+- a `Dockerfile` that does the following:
+  - clone the Node.js repository
+  - configure the pointer compression flag
+  - build the `node` binary
 
 Three routes are exposed:
 
