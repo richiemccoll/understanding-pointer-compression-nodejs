@@ -46,8 +46,23 @@ const largePayloadHandler = async () => {
   };
 };
 
+function bytesToKilobytes(bytes) {
+  return bytes / 1024;
+}
+
 const statsHandler = () => {
-  return { statusCode: 200, response: v8.getHeapStatistics() };
+  const stats = v8.getHeapStatistics();
+  return {
+    statusCode: 200,
+    response: {
+      total_heap_size: bytesToKilobytes(stats.total_heap_size),
+      total_heap_size_executable: bytesToKilobytes(
+        stats.total_heap_size_executable
+      ),
+      total_available_size: bytesToKilobytes(stats.total_available_size),
+      used_heap_size: bytesToKilobytes(stats.used_heap_size),
+    },
+  };
 };
 
 const generateLargePayloadHandler = (query, payload, callback) => {

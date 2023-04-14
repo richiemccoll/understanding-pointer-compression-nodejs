@@ -9,6 +9,8 @@
   },
   "author": "richiemccoll",
   "dependencies": {
-    "autocannon": "^7.10.0"
+    "autocannon": "^7.10.0",
+    "percentile": "^1.6.0",
+    "ttest": "^4.0.0"
   }
 }
